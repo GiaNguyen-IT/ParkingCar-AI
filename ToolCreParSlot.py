@@ -82,7 +82,7 @@ class ParkingLotApp(QMainWindow):
             if self.video.isOpened():
                 self.frame_count = int(self.video.get(cv2.CAP_PROP_FRAME_COUNT))
                 self.slider.setRange(0, self.frame_count - 1)
-                self.timer.start(30)  # 30 ms for approximately 30 fps
+                self.timer.start(30)  # 30 fps
             else:
                 QMessageBox.critical(self, "Error", "Could not open video.")
                 
